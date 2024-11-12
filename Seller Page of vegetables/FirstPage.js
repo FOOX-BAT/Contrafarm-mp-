@@ -1,4 +1,4 @@
-// Search functionality for filtering vegetables
+//Search 
 function filterVegetables() {
     const input = document.getElementById('searchBar');
     const filter = input.value.toLowerCase();
@@ -14,11 +14,13 @@ function filterVegetables() {
     });
 }
 
-// Store the list of vegetables added to the shop
+
+
+//To store the data in a list
 const productList = document.getElementById('seller-products');
 let totalEarnings = 0; // Variable to track total earnings
 
-// Function to handle form submission for adding vegetables
+// Function to handle form submission
 function handleFormSubmit(event) {
     event.preventDefault();
 
@@ -33,7 +35,7 @@ function handleFormSubmit(event) {
     // Calculate earnings for this product
     const earnings = price * quantity; // Directly using kilograms and rupees
 
-    // Create a new product listing for the shop page
+    // Create a new product listing
     const productDiv = document.createElement('div');
     productDiv.classList.add('product');
 
@@ -50,10 +52,35 @@ function handleFormSubmit(event) {
     // Update total earnings
     totalEarnings += earnings;
 
-    // Display total earnings on the "My Shop" page
+    // Display total earnings
     updateTotalEarningsDisplay();
-
-    // Clear the form fields after submission
+    
+    // Clear the form fields
     form.reset();
 }
+
+// Function to update the total earnings display
+function updateTotalEarningsDisplay() {
+    let totalDiv = document.getElementById('total-earnings');
+    if (!totalDiv) {
+        // If the total earnings div doesn't exist, create it below the product list
+        totalDiv = document.createElement('div');
+        totalDiv.id = 'total-earnings';
+        totalDiv.style.marginTop = '20px';
+        document.body.appendChild(totalDiv);
+    }
+    // Update the earnings value
+    totalDiv.innerHTML = `<h3>Total Potential Earnings: ₹${totalEarnings.toFixed(2)}</h3>`;
+
+    // Initialize total earnings display when the page loads
+    updateTotalEarningsDisplay();
+}
+
+// Add event listeners for each form
+const forms = document.querySelectorAll('form'); // Select all forms
+forms.forEach(form => {
+    form.addEventListener('submit', handleFormSubmit);
+
+});
+
 
