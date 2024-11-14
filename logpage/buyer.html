@@ -49,7 +49,7 @@
 
         <div class="login-container" id="login">
             <div class="top">
-                <span>Don't have an account? <a href="#" >Sign Up</a></span>
+                <span>Don't have an account? <a href="../buyer_home/buyerHome.html" >Sign in</a></span>
                 <header>Login as a buyer</header>
             </div>
             <div class="input-box">
@@ -173,16 +173,16 @@
 
    // Function to handle the Sign In button click
    function signIn() {
-       // var username = document.getElementById("username").value;
-       // var password = document.getElementById("password").value;
+       var username = document.getElementById("username").value;
+       var password = document.getElementById("password").value;
 
        // Basic validation (you can expand this with actual login validation logic)
-       // if (username && password) {
+       if (username && password) {
            // Redirect to the next page (update the URL to your desired next page)
-           window.location.href = "../buyer_home/buyer_home.html";
-       // } else {
-       //     alert("Please enter both username and password.");
-       // }
+           window.location.href = "../buyer_home/buyerHome.html";
+       } else {
+           alert("Please enter both username and password.");
+       }
    }
 </script>
 
