@@ -3,7 +3,7 @@ document.getElementById('sendContractButton').addEventListener('click', sendCont
 
 // Crop options data
 const cropOptions = {
-    vegetable: { "Tomato": 20, "Potato": 40, "Carrot": 30},
+    vegetable: { "Tomato": 45, "Cucumber": 50, "Carrot": 37},
     fruit: { "Apple": 50, "Banana": 30, "Grapes": 80 }
 };
 
