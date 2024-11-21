@@ -71,6 +71,7 @@ function downloadContractAsPDF() {
         const { jsPDF } = window.jspdf;
         const doc = new jsPDF();
 
+        doc.text("CONTRAFARM", 20, 5);
         doc.text("Contract Details", 20, 10);
         doc.text(`Buyer: ${buyerName}`, 20, 20);
         doc.text(`Seller: ${sellerName}`, 20, 30);
