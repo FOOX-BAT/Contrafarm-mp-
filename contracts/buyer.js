@@ -77,7 +77,7 @@ function downloadContractAsPDF() {
         doc.text(`Crop Category: ${cropCategory}`, 20, 40);
         doc.text(`Crop Type: ${cropType}`, 20, 50);
         doc.text(`Amount: ${amount} units`, 20, 60);
-        doc.text(`Price per Unit: ₹${price}`, 20, 70);
+        doc.text(`Price per Unit: $${price}`, 20, 70);
         doc.text(`Delivery Date: ${deliveryDate}`, 20, 80);
         doc.text(`Payment Due: ${paymentDue} days after delivery`, 20, 90);
         doc.text(`Contract Period: ${contractPeriod} ${periodUnit}`, 20, 100);
