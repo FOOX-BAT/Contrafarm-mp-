@@ -71,17 +71,17 @@ function downloadContractAsPDF() {
         const { jsPDF } = window.jspdf;
         const doc = new jsPDF();
 
-        doc.text("CONTRAFARM", 40, 20);
-        doc.text("Contract Details", 20, 10);
-        doc.text(`Buyer: ${buyerName}`, 20, 20);
-        doc.text(`Seller: ${sellerName}`, 20, 30);
-        doc.text(`Crop Category: ${cropCategory}`, 20, 40);
-        doc.text(`Crop Type: ${cropType}`, 20, 50);
-        doc.text(`Amount: ${amount} units`, 20, 60);
-        doc.text(`Price per Unit: ₹${price}`, 20, 70);
-        doc.text(`Delivery Date: ${deliveryDate}`, 20, 80);
-        doc.text(`Payment Due: ${paymentDue} days after delivery`, 20, 90);
-        doc.text(`Contract Period: ${contractPeriod} ${periodUnit}`, 20, 100);
+        doc.text("CONTRAFARM", 20, 10);
+        doc.text("Contract Details", 20, 20);
+        doc.text(`Buyer: ${buyerName}`, 20, 30);
+        doc.text(`Seller: ${sellerName}`, 20, 40);
+        doc.text(`Crop Category: ${cropCategory}`, 20, 50);
+        doc.text(`Crop Type: ${cropType}`, 20, 60);
+        doc.text(`Amount: ${amount} units`, 20, 70);
+        doc.text(`Price per Unit: ₹${price}`, 20, 80);
+        doc.text(`Delivery Date: ${deliveryDate}`, 20, 90);
+        doc.text(`Payment Due: ${paymentDue} days after delivery`, 20, 100);
+        doc.text(`Contract Period: ${contractPeriod} ${periodUnit}`, 20, 110);
 
         doc.save("contract.pdf");
     } else {
